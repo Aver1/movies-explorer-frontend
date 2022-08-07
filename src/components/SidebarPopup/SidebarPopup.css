@@ -2,16 +2,18 @@
   display: flex;
   overflow: hidden;
   height: 0;
+  width: 0;
 }
 
 .popup_opened {
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   /* display: flex; */
   justify-content: end;
-  top: -74px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, .3);
 }
 
@@ -20,7 +22,7 @@
   right: -100%;
   max-width: 520px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #fff;
   opacity: 1;
   display: flex;

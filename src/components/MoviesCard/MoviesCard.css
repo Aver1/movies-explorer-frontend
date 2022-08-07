@@ -1,0 +1,76 @@
+.movies-card {
+  position: relative;
+  width: 364px;
+  height: 271px;
+  display: flex;
+  flex-direction: column;
+  background: #FDFDFD;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.movies-card__header {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 14px 0 9px 14px;
+}
+
+.movies-card__duration {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  margin: 0 0 14px 14px;
+}
+
+.movies-card__add-button {
+  position: absolute;
+  top: 19px;
+  right: 14px;
+  width: 30px;
+  min-height: 30px;
+  border: none;
+  padding: 0;
+  background-color: #F9F9F9;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: url(../../images/zakrep_off.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  transition: .2s;
+}
+
+.movies-card__add-button:hover {
+  opacity: .8;
+}
+
+.movies-card__add-button_active {
+  background-color: #2BE080;
+  background-image: url(../../images/zakrep_on.svg)
+}
+
+.movies-card__add-button_type_delete {
+  background-size: 50%;
+  background-image: url(../../images/close-side-menu.svg);
+}
+
+.movies-card__image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .movies-card {
+    width: 339px;
+    height: 258px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .movies-card {
+    width: 300px;
+    height: 236px;
+  }
+}
