@@ -1,5 +1,4 @@
 .register {
-  /* border: 1px solid red; */
   max-width: 396px;
   width: 100%;
   display: flex;
@@ -31,7 +30,6 @@
 
 .register__form {
   width: 100%;
-  /* border: 1px solid black; */
   margin-top: 40px;
   display: flex;
   flex-direction: column;

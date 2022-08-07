@@ -1,6 +1,5 @@
 .profile {
   width: 100%;
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +15,6 @@
 .profile__form {
   max-width: 410px;
   width: 100%;
-  /* border: 1px solid greenyellow; */
   display: flex;
   flex-direction: column;
 }

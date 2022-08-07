@@ -5,7 +5,7 @@ import SidebarPopup from '../SidebarPopup/SidebarPopup';
 
 function Header (props) {
   //Переключатель шапки авторизированного пользователя
-  const logedIn = false;
+  const logedIn = true;
   const [isSideBarOpen, setSideBarState] = React.useState(false);
 
   function isOpen() {

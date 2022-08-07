@@ -8,7 +8,6 @@
 .popup_opened {
   position: fixed;
   z-index: 1;
-  /* display: flex; */
   justify-content: end;
   top: 0;
   left: 0;

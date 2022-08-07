@@ -16,7 +16,6 @@ function App() {
 
   return (
     <>
-      {/* <Header/> */}
       <Switch>
         <Route exact path="/">
           <Header/>
@@ -47,7 +46,6 @@ function App() {
           <NotFound></NotFound>
         </Route>
       </Switch>
-      {/* <Footer></Footer> */}
     </>
   );
 }
