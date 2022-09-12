@@ -50,6 +50,8 @@ function App() {
     }
     localStorage.removeItem('checkbox');
     localStorage.removeItem('movieName');
+    setFilterError('');
+    setSavedFilterError('');
   }, [ , loggedIn]);
 
   // console.log('loginssss ', loggedIn);
