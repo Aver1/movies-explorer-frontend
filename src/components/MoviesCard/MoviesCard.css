@@ -9,10 +9,14 @@
 }
 
 .movies-card__header {
+  max-height: 36px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-  margin: 14px 0 9px 14px;
+  margin: 14px 40px 9px 14px;
 }
 
 .movies-card__duration {
@@ -50,6 +54,7 @@
 }
 
 .movies-card__add-button_type_delete {
+  background-color: #F9F9F9;
   background-size: 50%;
   background-image: url(../../images/close-side-menu.svg);
 }
@@ -57,8 +62,39 @@
 .movies-card__image {
   width: 100%;
   object-fit: cover;
+  height: 203px;
   object-position: center;
   overflow: hidden;
+  transition: .2s;
+}
+
+.movies-card__image:hover {
+  filter: blur(3px);
+}
+
+.movies-card__link {
+  position: relative;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.movies-card__link::after {
+  content: 'Смотреть трейлер';
+  width: 140px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  position: absolute;
+  top: 45%;
+  left: calc(50% - 70px);
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  opacity: 0;
+  transition: .2s;
+}
+
+.movies-card__link:hover::after {
+  opacity: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -66,11 +102,17 @@
     width: 339px;
     height: 258px;
   }
+  .movies-card__image {
+    height: 190px;
+  }
 }
 
 @media screen and (max-width: 520px) {
   .movies-card {
     width: 300px;
     height: 236px;
+  }
+  .movies-card__image {
+    height: 168px;
   }
 }

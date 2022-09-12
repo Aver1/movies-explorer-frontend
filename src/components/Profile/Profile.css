@@ -13,6 +13,7 @@
 }
 
 .profile__form {
+  position: relative;
   max-width: 410px;
   width: 100%;
   display: flex;
@@ -58,7 +59,7 @@
   height: 1px;
   width: 100%;
   background-color: #E8E8E8;
-  margin: 16px 0 17px;
+  margin: 2px 0 17px;
 }
 
 .ptofile__btn {
@@ -109,7 +110,7 @@
   cursor: pointer;
 }
 
-.profile__submit_type_disabled {
+.profile__submit:disabled {
   background-color: #F8F8F8;
   color: #C2C2C2;
   cursor: default;
@@ -117,6 +118,31 @@
 
 .profile__submit_type_hidden {
   display: none;
+}
+
+.profile__input-error {
+  margin-top: 2px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #EE3465;
+  min-height: 12px;
+  text-align: center;
+}
+
+.profile__successful-submit {
+  position: absolute;
+  width: 145px;
+  bottom: -50%;
+  left: calc(50% - 72.5px);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #2BE080;
+  min-height: 12px;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

@@ -3,6 +3,16 @@
   width: 100%;
 }
 
+.saved-movies__filter-error {
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #EE3465;
+  margin: 0;
+}
+
 @media screen and (max-width: 768px) {
   .saved-movies {
     max-width: 708px;
