@@ -6,7 +6,10 @@ function Profile (props) {
   const currentUser = React.useContext(CurrentUserContext);
 
   React.useEffect(() => {
-    if (props.values.user && props.values.email && props.values.user !== currentUser.name && props.values.email !== currentUser.email) {
+    if (props.values.user && props.values.user !== currentUser.name) {
+      setIsDataChange(true);
+    }
+    else if (props.values.email && props.values.email !== currentUser.email) {
       setIsDataChange(true);
     }
     else {
@@ -19,9 +22,11 @@ function Profile (props) {
   }
 
   function handleSubmit (e) {
+    debugger;
     e.preventDefault();
 
-    props.onEditProfile(props.values.user, props.values.email);
+    props.onEditProfile(props.values.user || currentUser.name, props.values.email || currentUser.email);
+    setIsDataChange(false);
   }
 
   return (

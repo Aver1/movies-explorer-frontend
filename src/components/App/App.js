@@ -46,10 +46,12 @@ function App() {
   React.useEffect(() => {
     tokenCheck();
     if (loggedIn) {
+      debugger;
       getSavedMovies();
+      if (filmName !== '') {
+        filterMovie();
+      }
     }
-    localStorage.removeItem('checkbox');
-    localStorage.removeItem('movieName');
     setFilterError('');
     setSavedFilterError('');
   }, [ , loggedIn]);
@@ -284,7 +286,6 @@ function App() {
       })
   }
 
-
   //Лайк фильма
   const handleLike = (movie) => {
     // debugger;
@@ -380,7 +381,16 @@ function App() {
 
   //кнопка выхода
   const handleSignOut = () => {
+    debugger;
     localStorage.removeItem('jwt');
+    localStorage.removeItem('checkbox');
+    localStorage.removeItem('movieName');
+    changeFilmName('');
+    changeCheckBox(false);
+    changeSavedFilmName('');
+    changeSavedCheckBox(false)
+    setFilteredMovies([], ...filteredMovies);
+    console.log('loook here!!!!! ', filteredMovies);
     setLoggedIn(false);
     setSavedMovies([]);
     history.push('/');
