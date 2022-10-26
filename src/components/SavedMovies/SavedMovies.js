@@ -6,11 +6,14 @@ import MoviesCard from "../MoviesCard/MoviesCard";
 function SavedMovies (props) {
   return (
     <main className="saved-movies">
-      <SearchForm></SearchForm>
+      <SearchForm movieName={props.movieName} onSetMovieName={props.onSetMovieName} checkBox={props.checkBox} onSetCheckBox={props.onSetCheckBox} onSearch={props.onSearch}></SearchForm>
+      <h2 className="saved-movies__filter-error">{props.onFilterError}</h2>
       <MoviesCardList>
-      <MoviesCard></MoviesCard>
-        <MoviesCard></MoviesCard>
-        <MoviesCard></MoviesCard>
+        {
+          props.filteredMovies.slice(0, props.moviesCount).map((movie) => (
+            <MoviesCard onRemoveFilm={props.onRemoveFilm} onAddFilm={props.onAddFilm} savedMovies={props.savedMovies} key={movie.id} film={movie} onLike={props.onLike}></MoviesCard>
+          ))
+        }
       </MoviesCardList>
     </main>
   );

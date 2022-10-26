@@ -72,6 +72,10 @@
   border-bottom: 1px solid #2BE080;
 }
 
+.register__input_type_error:focus {
+  border-bottom: 1px solid #EE3465;
+}
+
 .register__error {
   font-style: normal;
   font-weight: 400;
@@ -92,13 +96,20 @@
   font-size: 14px;
   line-height: 17px;
   border-radius: 3px;
-  margin-top: 134px;
+  margin-top: 20px;
   cursor: pointer;
   transition: .2s;
 }
 
 .register__button:hover {
   opacity: .7;
+}
+
+.register__button:disabled {
+  background: #F8F8F8;
+  color: #C2C2C2;
+  opacity: 1;
+  cursor: default;
 }
 
 .register__login-container {
@@ -131,6 +142,17 @@
   opacity: .7;
 }
 
+.register__server-error {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+  color: #FF004C;
+  margin-top: 100px;
+  height: 13px;
+}
+
 @media screen and (max-width: 768px) {
   .register__logo {
     margin: 232px 0 40px;
@@ -148,8 +170,12 @@
   .register__form {
     margin-top: 80px;
   }
+
+  .register__server-error {
+    margin-top: 188px;
+  }
+
   .register__button {
-    margin-top: 222px;
     font-size: 12px;
     line-height: 15px;
   }
