@@ -102,5 +102,5 @@ class MainApi {
 
 export const mainApi = new MainApi({
   apiUrl: 'https://api.nomoreparties.co',
-  baseUrl: 'https://api.averdiploma.nomoredomains.xyz'
+  baseUrl: 'https://api.averdiploma.nomoredomainsicu.ru'
   }); 
